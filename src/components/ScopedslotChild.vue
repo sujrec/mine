@@ -1,0 +1,14 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+const count = ref(0)
+
+function increment(){
+    count.value++
+}
+</script>
+
+<template>
+    <div style="border:1px solid green; padding: 10px;">
+        <slot :count="count" :increment="increment"></slot>
+    </div>
+</template>
